@@ -4,6 +4,12 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
 public class NPC : MonoBehaviour, IInteractable {
     [SerializeField] string interactionName = "Talk";
+    [SerializeField] bool isLyingDown = false; //Not a good practice but I don't want to go too deep into this
+
+    void Awake() {
+        if (isLyingDown)
+            GetComponent<Animator>().SetBool("isLyingDown", true);
+    }
 
     UI_Handler uiHandler = null;
     private void OnTriggerEnter(Collider other) {
