@@ -115,10 +115,10 @@ namespace SystemExample.DialogueSystem {
                 parent.AddChild(newNode.name);
                 newNode.SetPlayerSpeaking(!parent.IsPlayerSpeaking());
                 newNode.SetPosition(parent.GetRect().position + newNodeOffset);
-                newNode.SetSize(new Vector2(200, 150));
+                newNode.SetSize(new Vector2(220, 150));
             } else {
                 newNode.SetPlayerSpeaking(false);
-                newNode.SetSize(new Vector2(250, 200));
+                newNode.SetSize(new Vector2(280, 200));
             }
 
             return newNode;

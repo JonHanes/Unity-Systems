@@ -13,7 +13,6 @@ namespace SystemExample.UI {
        
         [Header("Main")]
         [SerializeField] GameObject dialogueUI;
-        [SerializeField] ProgressHandler progHandler;
         [SerializeField] TextMeshProUGUI textBlock;
 
         [SerializeField] Transform historyContainer;
@@ -43,10 +42,13 @@ namespace SystemExample.UI {
 
         
         PlayerConversant playerConversant;
+        ProgressHandler progHandler;
         int aiConversantGUID;
         Dialogue dialogue;
 
         private void Awake() {
+            progHandler = FindObjectOfType<ProgressHandler>();
+
             playerConversant = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerConversant>();
             playerConversant.onConversationUpdated += UpdateUI;
 

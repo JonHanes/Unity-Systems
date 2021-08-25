@@ -25,7 +25,7 @@ public class InputHandler : MonoBehaviour
 
     void CheckInteractions()
     {
-
+        
     }
 
     void CheckMovement() {

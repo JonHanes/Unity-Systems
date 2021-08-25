@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7835519408994500760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe13635bb48a77b4a9db6ee578ecfe20, type: 3}
+  m_Name: c2167859-4ceb-46a1-8bff-10909a221744
+  m_EditorClassIdentifier: 
+  speakerType: 0
+  text: Yes please.
+  children:
+  - 259c1cf8-8a59-44ab-9f20-34559e34ea95
+  rect:
+    serializedVersion: 2
+    x: 342.16
+    y: 69.114
+    width: 220
+    height: 150
+  results:
+    GetItemOutcomes: []
+    QuestOutcomes: []
+    RelationshipChange:
+      Change: 0
+      EventId: 0
+  conditions: []
+  dialogueChallenges: []
+  dialogueNodeType: 0
+--- !u!114 &-6816441961017506944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe13635bb48a77b4a9db6ee578ecfe20, type: 3}
+  m_Name: 259c1cf8-8a59-44ab-9f20-34559e34ea95
+  m_EditorClassIdentifier: 
+  speakerType: 1
+  text: Then you're in luck!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 592.16003
+    y: 67.764
+    width: 220
+    height: 150
+  results:
+    GetItemOutcomes: []
+    QuestOutcomes: []
+    RelationshipChange:
+      Change: 0
+      EventId: 0
+  conditions: []
+  dialogueChallenges: []
+  dialogueNodeType: 0
+--- !u!114 &-5597130239547508601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe13635bb48a77b4a9db6ee578ecfe20, type: 3}
+  m_Name: 5996cf56-64d0-4242-9471-b2b495603c2c
+  m_EditorClassIdentifier: 
+  speakerType: 1
+  text: Hey there. Are you new? Do you need any help?
+  children:
+  - c2167859-4ceb-46a1-8bff-10909a221744
+  - 501c220d-2e3a-4d4e-99ba-9b7bc98eba8a
+  rect:
+    serializedVersion: 2
+    x: -3
+    y: 81
+    width: 280
+    height: 250
+  results:
+    GetItemOutcomes: []
+    QuestOutcomes: []
+    RelationshipChange:
+      Change: 0
+      EventId: 0
+  conditions: []
+  dialogueChallenges: []
+  dialogueNodeType: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbdc5fb3879d5bc43a3f64883eb4ec26, type: 3}
+  m_Name: Tutorial Dialog
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -5597130239547508601}
+  - {fileID: -7835519408994500760}
+  - {fileID: 2555548431287417035}
+  - {fileID: -6816441961017506944}
+  newNodeOffset: {x: 250, y: 0}
+  conditions: []
+  isRandom: 1
+--- !u!114 &2555548431287417035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe13635bb48a77b4a9db6ee578ecfe20, type: 3}
+  m_Name: 501c220d-2e3a-4d4e-99ba-9b7bc98eba8a
+  m_EditorClassIdentifier: 
+  speakerType: 0
+  text: No thanks.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 343.798
+    y: 265.314
+    width: 220
+    height: 150
+  results:
+    GetItemOutcomes: []
+    QuestOutcomes: []
+    RelationshipChange:
+      Change: 0
+      EventId: 0
+  conditions: []
+  dialogueChallenges: []
+  dialogueNodeType: 0
