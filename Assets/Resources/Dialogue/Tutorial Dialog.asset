@@ -1,5 +1,47 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8842744457625792518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe13635bb48a77b4a9db6ee578ecfe20, type: 3}
+  m_Name: ef9bf19b-481c-4768-a5b5-524e182b45d9
+  m_EditorClassIdentifier: 
+  speakerType: 1
+  text: Good, now that you have the water, pour it on the drunk person there.
+  children:
+  - 0d46fff1-b07a-48b4-ba10-c591abc80b31
+  - 92218723-8ab7-4049-9d24-d6644ed61c2c
+  rect:
+    serializedVersion: 2
+    x: -8.828003
+    y: 605.618
+    width: 280
+    height: 200
+  results:
+    GetItemOutcomes: []
+    QuestOutcomes: []
+    RelationshipChange:
+      Change: 0
+      EventId: 0
+  conditions:
+  - AttributeChecks: []
+    InventoryChecks:
+    - ItemName: Water
+      Required: 1
+      IsNeeded: 1
+    QuestChecks:
+    - Quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
+      StageNeeded: 1
+      AllBut: 0
+    RelationshipChecks: []
+  dialogueChallenges: []
+  dialogueNodeType: 0
 --- !u!114 &-7835519408994500760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18,8 +60,8 @@ MonoBehaviour:
   - 259c1cf8-8a59-44ab-9f20-34559e34ea95
   rect:
     serializedVersion: 2
-    x: 342.16
-    y: 69.114
+    x: 330.16
+    y: 68.114
     width: 220
     height: 150
   results:
@@ -45,7 +87,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakerType: 1
   text: Then you're in luck!
-  children: []
+  children:
+  - 8aa22d7d-1877-4372-8f34-88259855dc0f
   rect:
     serializedVersion: 2
     x: 592.16003
@@ -80,13 +123,157 @@ MonoBehaviour:
   - 501c220d-2e3a-4d4e-99ba-9b7bc98eba8a
   rect:
     serializedVersion: 2
-    x: -3
-    y: 81
+    x: -4
+    y: 32
     width: 280
     height: 250
   results:
     GetItemOutcomes: []
     QuestOutcomes: []
+    RelationshipChange:
+      Change: 0
+      EventId: 0
+  conditions:
+  - AttributeChecks: []
+    InventoryChecks: []
+    QuestChecks:
+    - Quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
+      StageNeeded: 0
+      AllBut: 0
+    RelationshipChecks: []
+  dialogueChallenges: []
+  dialogueNodeType: 0
+--- !u!114 &-5555198766218046291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe13635bb48a77b4a9db6ee578ecfe20, type: 3}
+  m_Name: c8451fda-28e7-4d17-a446-943005a21649
+  m_EditorClassIdentifier: 
+  speakerType: 0
+  text: Bye
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 311
+    y: 402.83203
+    width: 220
+    height: 150
+  results:
+    GetItemOutcomes: []
+    QuestOutcomes: []
+    RelationshipChange:
+      Change: 0
+      EventId: 0
+  conditions: []
+  dialogueChallenges: []
+  dialogueNodeType: 0
+--- !u!114 &-5155054089720783142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe13635bb48a77b4a9db6ee578ecfe20, type: 3}
+  m_Name: 92218723-8ab7-4049-9d24-d6644ed61c2c
+  m_EditorClassIdentifier: 
+  speakerType: 0
+  text: No way.
+  children:
+  - ce12bfaa-3211-47d0-8b58-2df759eda0ad
+  rect:
+    serializedVersion: 2
+    x: 303.172
+    y: 731.618
+    width: 220
+    height: 150
+  results:
+    GetItemOutcomes: []
+    QuestOutcomes: []
+    RelationshipChange:
+      Change: 0
+      EventId: 0
+  conditions: []
+  dialogueChallenges: []
+  dialogueNodeType: 0
+--- !u!114 &-4710706793755975080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe13635bb48a77b4a9db6ee578ecfe20, type: 3}
+  m_Name: fa61926b-5292-448c-a9bd-c0db73ea7a14
+  m_EditorClassIdentifier: 
+  speakerType: 1
+  text: 'I have given you a task.
+
+    Interact with the well!'
+  children:
+  - c8451fda-28e7-4d17-a446-943005a21649
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 379.83203
+    width: 280
+    height: 200
+  results:
+    GetItemOutcomes: []
+    QuestOutcomes: []
+    RelationshipChange:
+      Change: 0
+      EventId: 0
+  conditions:
+  - AttributeChecks: []
+    InventoryChecks:
+    - ItemName: Water
+      Required: 1
+      IsNeeded: 0
+    QuestChecks:
+    - Quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
+      StageNeeded: 1
+      AllBut: 0
+    RelationshipChecks: []
+  dialogueChallenges: []
+  dialogueNodeType: 0
+--- !u!114 &-4167310042795327125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe13635bb48a77b4a9db6ee578ecfe20, type: 3}
+  m_Name: c9a3a026-f9af-4ab4-8a08-73dc9e13835f
+  m_EditorClassIdentifier: 
+  speakerType: 1
+  text: Just like how you talked to me, some items can be interacted with. Try interacting
+    with the well and come back to me!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1089.16
+    y: 66.764
+    width: 220
+    height: 150
+  results:
+    GetItemOutcomes: []
+    QuestOutcomes:
+    - Quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
+      action: 0
     RelationshipChange:
       Change: 0
       EventId: 0
@@ -110,9 +297,47 @@ MonoBehaviour:
   - {fileID: -7835519408994500760}
   - {fileID: 2555548431287417035}
   - {fileID: -6816441961017506944}
+  - {fileID: 4884490838355294837}
+  - {fileID: -4167310042795327125}
+  - {fileID: -4710706793755975080}
+  - {fileID: -8842744457625792518}
+  - {fileID: 5929305564998380296}
+  - {fileID: -5155054089720783142}
+  - {fileID: 2310625350653630756}
+  - {fileID: -5555198766218046291}
   newNodeOffset: {x: 250, y: 0}
   conditions: []
   isRandom: 1
+--- !u!114 &2310625350653630756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe13635bb48a77b4a9db6ee578ecfe20, type: 3}
+  m_Name: ce12bfaa-3211-47d0-8b58-2df759eda0ad
+  m_EditorClassIdentifier: 
+  speakerType: 1
+  text: I'll wait for you to change your mind.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 547.172
+    y: 727.618
+    width: 220
+    height: 150
+  results:
+    GetItemOutcomes: []
+    QuestOutcomes: []
+    RelationshipChange:
+      Change: 0
+      EventId: 0
+  conditions: []
+  dialogueChallenges: []
+  dialogueNodeType: 0
 --- !u!114 &2555548431287417035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +357,67 @@ MonoBehaviour:
     serializedVersion: 2
     x: 343.798
     y: 265.314
+    width: 220
+    height: 150
+  results:
+    GetItemOutcomes: []
+    QuestOutcomes: []
+    RelationshipChange:
+      Change: 0
+      EventId: 0
+  conditions: []
+  dialogueChallenges: []
+  dialogueNodeType: 0
+--- !u!114 &4884490838355294837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe13635bb48a77b4a9db6ee578ecfe20, type: 3}
+  m_Name: 8aa22d7d-1877-4372-8f34-88259855dc0f
+  m_EditorClassIdentifier: 
+  speakerType: 1
+  text: You can hold down the shift key to turn around faster.
+  children:
+  - c9a3a026-f9af-4ab4-8a08-73dc9e13835f
+  rect:
+    serializedVersion: 2
+    x: 842.16003
+    y: 67.764
+    width: 220
+    height: 150
+  results:
+    GetItemOutcomes: []
+    QuestOutcomes: []
+    RelationshipChange:
+      Change: 0
+      EventId: 0
+  conditions: []
+  dialogueChallenges: []
+  dialogueNodeType: 0
+--- !u!114 &5929305564998380296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe13635bb48a77b4a9db6ee578ecfe20, type: 3}
+  m_Name: 0d46fff1-b07a-48b4-ba10-c591abc80b31
+  m_EditorClassIdentifier: 
+  speakerType: 0
+  text: Got it.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 309.172
+    y: 557.618
     width: 220
     height: 150
   results:

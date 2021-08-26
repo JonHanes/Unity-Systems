@@ -58,7 +58,7 @@ public class ProgressHandler : MonoBehaviour {
         currQuest.Activate();
         activeQuests.Add(currQuest);
 
-        questsUpdated();
+        //questsUpdated();
     }
 
     void CheckInventoryForQuestItems() {

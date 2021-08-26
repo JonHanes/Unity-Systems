@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbdc5fb3879d5bc43a3f64883eb4ec26, type: 3}
-  m_Name: Ignored
+  m_Script: {fileID: 11500000, guid: a76dcb57015d1c043899f61378a20d50, type: 3}
+  m_Name: A Rude Wakeup Call
   m_EditorClassIdentifier: 
+  questName: 
+  patrons: 
   nodes:
-  - {fileID: 8162696209368362960}
+  - {fileID: 5314152834872035856}
   newNodeOffset: {x: 250, y: 0}
-  conditions: []
-  isRandom: 1
---- !u!114 &8162696209368362960
+--- !u!114 &5314152834872035856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -26,24 +26,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe13635bb48a77b4a9db6ee578ecfe20, type: 3}
-  m_Name: 7dc0f3db-0bea-4add-a2f6-2ced4702d411
+  m_Script: {fileID: 11500000, guid: c5341aae44eac944eac3fda59f9fee69, type: 3}
+  m_Name: ae15261d-5efe-43db-b3e2-4ea3ae870552
   m_EditorClassIdentifier: 
-  speakerType: 2
-  text: You are simply ignored.
+  text: 
   children: []
   rect:
     serializedVersion: 2
-    x: -1
-    y: -2
-    width: 280
-    height: 200
-  results:
-    GetItemOutcomes: []
-    QuestOutcomes: []
-    RelationshipChange:
-      Change: 0
-      EventId: 0
-  conditions: []
-  dialogueChallenges: []
-  dialogueNodeType: 0
+    x: 0
+    y: 0
+    width: 200
+    height: 100
+  moneyGain:
+    Amount: 0
+  requirements: []
