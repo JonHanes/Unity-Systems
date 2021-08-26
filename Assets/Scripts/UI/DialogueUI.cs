@@ -30,8 +30,6 @@ namespace SystemExample.UI {
         [SerializeField] Button quitButton;
 
         [Header("Sidebars")]
-        [SerializeField] InfoPanel infoPanelPlayer;
-        [SerializeField] InfoPanel infoPanelAI;
         [SerializeField] TextMeshProUGUI relationshipInfo;
 
         [Header("Entities")]
@@ -59,8 +57,6 @@ namespace SystemExample.UI {
         private void Start() {
             nextButton.onClick.AddListener(() => playerConversant.Next());
             quitButton.onClick.AddListener(() => {
-                infoPanelPlayer.ResetState();
-                infoPanelAI.ResetState();
                 playerConversant.Quit();
             });
             UpdateUI();
@@ -161,30 +157,6 @@ namespace SystemExample.UI {
         
         }
 
-        public void SetupSection(string title, bool isPlayer) {
-            var infoPanel = isPlayer ? infoPanelPlayer : infoPanelAI;
-            ClearSectionContent(infoPanel);
-            //Set content
-            var sectionType = (SectionType)Enum.Parse(typeof(SectionType), title);
-
-            switch (sectionType) {
-                case SectionType.Attributes:
-                    infoPanel.ShowAttributes(true);
-                    break;
-                case SectionType.Quests:
-                    var quests = isPlayer ? progHandler.GetQuests() : progHandler.GetQuests(aiConversantGUID);
-                    infoPanel.ShowQuests(quests);
-                    break;
-                case SectionType.Preferences:
-
-                    break;
-                case SectionType.Relationship:
-                    var relations = progHandler.GetRelations();
-                    infoPanel.ShowRelations(relations);
-                    break;
-            }
-        }
-
         public void AddToHistory(string speaker, string text) {
             var inst = Instantiate(historyPrefab, Vector3.zero, Quaternion.identity, historyContainer);
 
@@ -201,12 +173,6 @@ namespace SystemExample.UI {
 
         public void ClearChoices() {
             foreach (Transform item in choiceRoot) {
-                Destroy(item.gameObject);
-            }
-        }
-
-        public void ClearSectionContent(InfoPanel infoPanel) {
-            foreach (Transform item in infoPanel.GetSectionInfoContainer()) {
                 Destroy(item.gameObject);
             }
         }
