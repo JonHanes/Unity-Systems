@@ -17,7 +17,9 @@ namespace SystemExample.Conditions {
 
         public bool CheckIfContains() {
             if (Inventory == null) Inventory = GameObject.FindWithTag("Player").GetComponent<Inventory>();
-            return Inventory.HasItem(ItemName);
+            bool hasItem = Inventory.HasItem(ItemName);
+
+            return IsNeeded ? hasItem : !hasItem;
         }
 
         public string ItemName;

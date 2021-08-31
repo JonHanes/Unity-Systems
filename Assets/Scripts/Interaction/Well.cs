@@ -1,4 +1,5 @@
 using System.Collections;
+using SystemExample.InventorySystem;
 using UnityEngine;
 
 namespace SystemExample.Interaction {
@@ -7,6 +8,7 @@ namespace SystemExample.Interaction {
     public class Well : MonoBehaviour, IInteractable  {
 
         [SerializeField] string interactionName = "Use";
+        [SerializeField] GameObject waterPrefab;
         bool inRange = false;
         UI_Handler uiHandler = null;
 
@@ -32,6 +34,9 @@ namespace SystemExample.Interaction {
         public void Interact() {
             GetComponent<AudioSource>().Play();
             uiHandler.ToggleMenu(false);
+
+            Inventory inv = GameObject.FindWithTag("Player").GetComponent<Inventory>();
+            inv.AddItem(new InventoryItem(waterPrefab, 1));
         }
 
         private void OnTriggerExit(Collider other) {

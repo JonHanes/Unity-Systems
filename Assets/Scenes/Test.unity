@@ -22280,6 +22280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionName: Use
+  waterPrefab: {fileID: 4222500164520304550, guid: 4b8b99a62391d9f489c0be78dd02b464, type: 3}
 --- !u!65 &1540787925
 BoxCollider:
   m_ObjectHideFlags: 0
