@@ -8,8 +8,8 @@ using UnityEngine;
 
 namespace SystemExample.States {
 public class ProgressHandler : MonoBehaviour {
-    List<QuestState> questStates = new List<QuestState>();
-    List<QuestState> activeQuests = new List<QuestState>();
+    public List<QuestState> questStates = new List<QuestState>();
+    public List<QuestState> activeQuests = new List<QuestState>();
     List<Relationship> relations = new List<Relationship>();
     Inventory inventory;
 
@@ -58,7 +58,7 @@ public class ProgressHandler : MonoBehaviour {
         currQuest.Activate();
         activeQuests.Add(currQuest);
 
-        //questsUpdated();
+        questsUpdated();
     }
 
     void CheckInventoryForQuestItems() {

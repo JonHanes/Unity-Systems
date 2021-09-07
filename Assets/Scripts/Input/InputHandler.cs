@@ -1,5 +1,6 @@
 using System.Collections;
 using SystemExample.Entities;
+using SystemExample.Quests.UI;
 using UnityEngine;
 
 public class InputHandler : MonoBehaviour
@@ -18,14 +19,16 @@ public class InputHandler : MonoBehaviour
 
     void Update()
     {
-        //CheckInteractions();
+        CheckInteractions();
         CheckMovement();
         CheckRotation();
     }
 
     void CheckInteractions()
     {
-        
+        if (Input.GetKeyDown(KeyCode.M)) {
+            GameObject.FindObjectOfType<QuestUIHandler>().ToggleDisplay();
+        }
     }
 
     void CheckMovement() {
