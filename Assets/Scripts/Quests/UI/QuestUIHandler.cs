@@ -36,8 +36,9 @@ public class QuestUIHandler : MonoBehaviour {
     }
 
     public void ToggleDisplay() {
-        bool activity = UI_Container.gameObject.activeInHierarchy;
-        UI_Container.gameObject.SetActive(!activity);
+        GameObject parent = UI_Container.transform.parent.gameObject;
+        bool activity = parent.activeInHierarchy;
+        parent.gameObject.SetActive(!activity);
     }
 }
 
