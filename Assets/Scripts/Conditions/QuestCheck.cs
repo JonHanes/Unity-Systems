@@ -14,10 +14,15 @@ namespace SystemExample.Conditions {
 
         public override bool Validate() {
             
-            var q = quests.Where(q => q.GetQuest() == Quest).FirstOrDefault();
+            var q = quests.Where(q => q.GetQuest() == RequiredState.GetQuest()).FirstOrDefault();
+
+            if (RequiredState.GetCurrentNode() != null) { //If filtering by specific step of the quest
+                if (AllBut) return q.GetCurrentNode() != RequiredState.GetCurrentNode();
+                return q.GetCurrentNode() == RequiredState.GetCurrentNode(); 
+            }
 
             if (!AllBut) { //Default case
-                switch(StageNeeded) {
+                switch(RequiredState.GetStage()) {
                     case QuestStage.NotFound:
                         return q.GetStage() == QuestStage.NotFound;
                     case QuestStage.Active:
@@ -26,7 +31,7 @@ namespace SystemExample.Conditions {
                         return q.GetStage() == QuestStage.Completed;
                 }
             } else {
-                switch(StageNeeded) {
+                switch(RequiredState.GetStage()) {
                     case QuestStage.NotFound:
                         return q.GetStage() != QuestStage.NotFound;
                     case QuestStage.Active:
@@ -40,9 +45,7 @@ namespace SystemExample.Conditions {
             return false;
         }
 
-        public Quest Quest;
-
-        public QuestStage StageNeeded;
+        public QuestState RequiredState;
         public bool AllBut = false;
 
     }

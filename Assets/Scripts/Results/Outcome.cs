@@ -8,7 +8,8 @@ namespace SystemExample.Results {
         TimeSkip,
         Teleport,
         LoseItem,
-        LoseMoney
+        LoseMoney,
+        StateChange
     }
 
     public abstract class Outcome {

@@ -2,15 +2,30 @@ using SystemExample.DialogueSystem;
 using SystemExample.Interaction;
 using UnityEngine;
 
+public enum NPC_State {
+    Normal,
+    Aggressive,
+    Sleeping
+}
+
 [RequireComponent(typeof(BoxCollider))]
 public class NPC : MonoBehaviour, IInteractable {
     [SerializeField] string interactionName = "Talk";
-    [SerializeField] bool isLyingDown = false; //Not a good practice but I don't want to go too deep into this
-    public bool isColliding = false;
+    [SerializeField] NPC_State state;
+    bool isColliding = false;
+
+    public NPC_State GetState() => state;
+    public void SetState(NPC_State ns) {
+
+        //Update animation
+        if (ns != NPC_State.Sleeping)
+            GetComponent<Animator>().SetBool("isSleeping", false);
+        state = ns; 
+    }
 
     void Awake() {
-        if (isLyingDown)
-            GetComponent<Animator>().SetBool("isLyingDown", true);
+        if (state == NPC_State.Sleeping)
+            GetComponent<Animator>().SetBool("isSleeping", true);
     }
 
     void Update() {

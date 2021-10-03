@@ -1589,8 +1589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionName: Talk
-  isLyingDown: 1
-  isColliding: 0
+  state: 2
 --- !u!95 &126666351
 Animator:
   serializedVersion: 3
@@ -1833,8 +1832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionName: Talk
-  isLyingDown: 0
-  isColliding: 0
+  state: 0
 --- !u!65 &139179585
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3649,8 +3647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionName: Talk
-  isLyingDown: 0
-  isColliding: 0
+  state: 0
 --- !u!65 &270259634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5547,8 +5544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionName: Talk
-  isLyingDown: 0
-  isColliding: 0
+  state: 0
 --- !u!65 &400105046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5725,8 +5721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionName: Talk
-  isLyingDown: 0
-  isColliding: 0
+  state: 0
 --- !u!65 &426256599
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8982,15 +8977,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5910644806411399088, guid: 8d6a0c8b376d1f44ea2af07097cc2cbf, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 31.23
+      value: 21.23
       objectReference: {fileID: 0}
     - target: {fileID: 5910644806411399088, guid: 8d6a0c8b376d1f44ea2af07097cc2cbf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 62.5
       objectReference: {fileID: 0}
     - target: {fileID: 5910644806411399088, guid: 8d6a0c8b376d1f44ea2af07097cc2cbf, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -15.615
+      value: -10.615
       objectReference: {fileID: 0}
     - target: {fileID: 5910644806411399091, guid: 8d6a0c8b376d1f44ea2af07097cc2cbf, type: 3}
       propertyPath: m_fontAsset
@@ -9022,7 +9017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5910644806827419437, guid: 8d6a0c8b376d1f44ea2af07097cc2cbf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 510
       objectReference: {fileID: 0}
     - target: {fileID: 5910644806827419437, guid: 8d6a0c8b376d1f44ea2af07097cc2cbf, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -9098,7 +9093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8520680388115961259, guid: 8d6a0c8b376d1f44ea2af07097cc2cbf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 8520680388115961259, guid: 8d6a0c8b376d1f44ea2af07097cc2cbf, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -20308,8 +20303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionName: Talk
-  isLyingDown: 0
-  isColliding: 0
+  state: 0
 --- !u!65 &1366426241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24214,8 +24208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionName: Talk
-  isLyingDown: 0
-  isColliding: 0
+  state: 0
 --- !u!65 &1592562308
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27979,8 +27972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionName: Talk
-  isLyingDown: 0
-  isColliding: 0
+  state: 0
 --- !u!65 &1873880186
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29455,8 +29447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionName: Talk
-  isLyingDown: 0
-  isColliding: 0
+  state: 0
 --- !u!65 &1953491722
 BoxCollider:
   m_ObjectHideFlags: 0

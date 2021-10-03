@@ -12,11 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5341aae44eac944eac3fda59f9fee69, type: 3}
   m_Name: 2860e936-96e4-4fbf-98b8-e60a987fe1da
   m_EditorClassIdentifier: 
-  text: Return to the tutorial NPC
+  text: Return to the tutorial NPC and finish the quest.
   children: []
   rect:
     serializedVersion: 2
-    x: 499
+    x: 767
+    y: 13
+    width: 200
+    height: 150
+  moneyGain:
+    Amount: 0
+  requirements: []
+--- !u!114 &-5592703996618266496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5341aae44eac944eac3fda59f9fee69, type: 3}
+  m_Name: 9059ba42-4318-44b2-80b6-8354d27378f4
+  m_EditorClassIdentifier: 
+  text: Return to the tutorial NPC
+  children:
+  - 958c5af3-0a5b-425f-a5dd-eb518a7510dd
+  rect:
+    serializedVersion: 2
+    x: 237
     y: 6
     width: 200
     height: 150
@@ -40,8 +64,8 @@ MonoBehaviour:
   - 2860e936-96e4-4fbf-98b8-e60a987fe1da
   rect:
     serializedVersion: 2
-    x: 249
-    y: 6
+    x: 516
+    y: 21
     width: 200
     height: 150
   moneyGain:
@@ -59,12 +83,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a76dcb57015d1c043899f61378a20d50, type: 3}
   m_Name: A Rude Wakeup Call
   m_EditorClassIdentifier: 
-  questName: 
+  questName: A Rude Wakeup Call
   patrons: 
   nodes:
   - {fileID: 5314152834872035856}
   - {fileID: -4706243103266376446}
   - {fileID: -8318564730709451736}
+  - {fileID: -5592703996618266496}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &5314152834872035856
 MonoBehaviour:
@@ -80,7 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Fetch water
   children:
-  - 958c5af3-0a5b-425f-a5dd-eb518a7510dd
+  - 9059ba42-4318-44b2-80b6-8354d27378f4
   rect:
     serializedVersion: 2
     x: 0

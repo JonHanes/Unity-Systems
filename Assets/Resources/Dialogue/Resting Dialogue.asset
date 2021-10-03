@@ -17,8 +17,8 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 59
-    y: 50
+    x: 58
+    y: 49
     width: 250
     height: 200
   results:
@@ -27,24 +27,32 @@ MonoBehaviour:
     RelationshipChange:
       Change: 0
       EventId: 0
+    StateChanges: []
   conditions:
   - AttributeChecks: []
     InventoryChecks: []
     QuestChecks:
-    - Quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
-      StageNeeded: 0
-      AllBut: 0
+    - RequiredState:
+        quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
+        stage: 1
+        currentNode: {fileID: -4706243103266376446, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
+      AllBut: 1
     RelationshipChecks: []
+    StateChecks:
+    - StateNeeded: 2
   - AttributeChecks: []
     InventoryChecks:
     - ItemName: Water
       Required: 1
       IsNeeded: 0
     QuestChecks:
-    - Quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
-      StageNeeded: 1
+    - RequiredState:
+        quest: {fileID: 0}
+        stage: 0
+        currentNode: {fileID: 0}
       AllBut: 0
     RelationshipChecks: []
+    StateChecks: []
   dialogueChallenges: []
   dialogueNodeType: 0
 --- !u!114 &-3992410141733006892
@@ -80,6 +88,7 @@ MonoBehaviour:
     RelationshipChange:
       Change: 0
       EventId: 0
+    StateChanges: []
   conditions: []
   dialogueChallenges: []
   dialogueNodeType: 0
@@ -110,6 +119,7 @@ MonoBehaviour:
     RelationshipChange:
       Change: 0
       EventId: 0
+    StateChanges: []
   conditions: []
   dialogueChallenges: []
   dialogueNodeType: 0
@@ -132,6 +142,7 @@ MonoBehaviour:
   - {fileID: -2453616497000503149}
   - {fileID: 4306729583534017610}
   - {fileID: -3992410141733006892}
+  - {fileID: 6934114206942617329}
   newNodeOffset: {x: 250, y: 0}
   conditions: []
   isRandom: 1
@@ -154,8 +165,8 @@ MonoBehaviour:
   - 84362cf0-9abe-45f0-bb21-01f8d2a9d76f
   rect:
     serializedVersion: 2
-    x: 59.520004
-    y: 274.78397
+    x: 49.520004
+    y: 258.78397
     width: 280
     height: 200
   results:
@@ -164,6 +175,7 @@ MonoBehaviour:
     RelationshipChange:
       Change: 0
       EventId: 0
+    StateChanges: []
   conditions:
   - AttributeChecks: []
     InventoryChecks:
@@ -171,10 +183,13 @@ MonoBehaviour:
       Required: 1
       IsNeeded: 1
     QuestChecks:
-    - Quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
-      StageNeeded: 1
+    - RequiredState:
+        quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
+        stage: 1
+        currentNode: {fileID: -4706243103266376446, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
       AllBut: 0
     RelationshipChecks: []
+    StateChecks: []
   dialogueChallenges: []
   dialogueNodeType: 0
 --- !u!114 &4306729583534017610
@@ -205,6 +220,7 @@ MonoBehaviour:
     RelationshipChange:
       Change: 0
       EventId: 0
+    StateChanges: []
   conditions: []
   dialogueChallenges: []
   dialogueNodeType: 0
@@ -238,6 +254,46 @@ MonoBehaviour:
     RelationshipChange:
       Change: 0
       EventId: 0
+    StateChanges:
+    - State: 0
+      EventId: 0
   conditions: []
+  dialogueChallenges: []
+  dialogueNodeType: 0
+--- !u!114 &6934114206942617329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe13635bb48a77b4a9db6ee578ecfe20, type: 3}
+  m_Name: ab31eb19-c556-44f0-8b54-6a761f295046
+  m_EditorClassIdentifier: 
+  speakerType: 1
+  text: I do not need to talk to him anymore.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 51
+    y: 515
+    width: 280
+    height: 200
+  results:
+    GetItemOutcomes: []
+    QuestOutcomes: []
+    RelationshipChange:
+      Change: 0
+      EventId: 0
+    StateChanges: []
+  conditions:
+  - AttributeChecks: []
+    InventoryChecks: []
+    QuestChecks: []
+    RelationshipChecks: []
+    StateChecks:
+    - StateNeeded: 0
   dialogueChallenges: []
   dialogueNodeType: 0

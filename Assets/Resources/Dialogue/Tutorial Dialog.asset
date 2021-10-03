@@ -1,5 +1,46 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9161962087518743459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe13635bb48a77b4a9db6ee578ecfe20, type: 3}
+  m_Name: f55b3542-6651-4505-9b2c-eb5b58801106
+  m_EditorClassIdentifier: 
+  speakerType: 1
+  text: Amazing! Good job!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 11.440033
+    y: 869.416
+    width: 280
+    height: 200
+  results:
+    GetItemOutcomes: []
+    QuestOutcomes:
+    - Quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
+      action: 2
+    RelationshipChange:
+      Change: 5
+      EventId: 0
+  conditions:
+  - AttributeChecks: []
+    InventoryChecks: []
+    QuestChecks:
+    - RequiredState:
+        quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
+        stage: 1
+        currentNode: {fileID: -8318564730709451736, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
+      AllBut: 0
+    RelationshipChecks: []
+  dialogueChallenges: []
+  dialogueNodeType: 0
 --- !u!114 &-8842744457625792518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19,8 +60,8 @@ MonoBehaviour:
   - 92218723-8ab7-4049-9d24-d6644ed61c2c
   rect:
     serializedVersion: 2
-    x: -8.828003
-    y: 605.618
+    x: -2.0440063
+    y: 654.618
     width: 280
     height: 200
   results:
@@ -36,9 +77,16 @@ MonoBehaviour:
       Required: 1
       IsNeeded: 1
     QuestChecks:
-    - Quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
-      StageNeeded: 1
+    - RequiredState:
+        quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
+        stage: 1
+        currentNode: {fileID: 0}
       AllBut: 0
+    - RequiredState:
+        quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
+        stage: 1
+        currentNode: {fileID: -8318564730709451736, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
+      AllBut: 1
     RelationshipChecks: []
   dialogueChallenges: []
   dialogueNodeType: 0
@@ -137,8 +185,10 @@ MonoBehaviour:
   - AttributeChecks: []
     InventoryChecks: []
     QuestChecks:
-    - Quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
-      StageNeeded: 0
+    - RequiredState:
+        quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
+        stage: 0
+        currentNode: {fileID: 0}
       AllBut: 0
     RelationshipChecks: []
   dialogueChallenges: []
@@ -224,8 +274,8 @@ MonoBehaviour:
   - c8451fda-28e7-4d17-a446-943005a21649
   rect:
     serializedVersion: 2
-    x: -2
-    y: 379.83203
+    x: 1
+    y: 363.83203
     width: 280
     height: 200
   results:
@@ -241,8 +291,10 @@ MonoBehaviour:
       Required: 1
       IsNeeded: 0
     QuestChecks:
-    - Quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
-      StageNeeded: 1
+    - RequiredState:
+        quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
+        stage: 1
+        currentNode: {fileID: 5314152834872035856, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
       AllBut: 0
     RelationshipChecks: []
   dialogueChallenges: []
@@ -305,6 +357,7 @@ MonoBehaviour:
   - {fileID: -5155054089720783142}
   - {fileID: 2310625350653630756}
   - {fileID: -5555198766218046291}
+  - {fileID: -9161962087518743459}
   newNodeOffset: {x: 250, y: 0}
   conditions: []
   isRandom: 1
@@ -422,7 +475,9 @@ MonoBehaviour:
     height: 150
   results:
     GetItemOutcomes: []
-    QuestOutcomes: []
+    QuestOutcomes:
+    - Quest: {fileID: 11400000, guid: ad88d6c9a02d1884faf4feb097621460, type: 2}
+      action: 1
     RelationshipChange:
       Change: 0
       EventId: 0

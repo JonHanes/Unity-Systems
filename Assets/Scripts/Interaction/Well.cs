@@ -1,5 +1,7 @@
 using System.Collections;
 using SystemExample.InventorySystem;
+using SystemExample.States;
+using System.Linq;
 using UnityEngine;
 
 namespace SystemExample.Interaction {
@@ -11,6 +13,7 @@ namespace SystemExample.Interaction {
         [SerializeField] GameObject waterPrefab;
         bool inRange = false;
         UI_Handler uiHandler = null;
+        ProgressHandler progHandler;
 
         private void Update() {
             if (!inRange) return;
@@ -35,7 +38,10 @@ namespace SystemExample.Interaction {
             GetComponent<AudioSource>().Play();
             uiHandler.ToggleMenu(false);
 
-            Inventory inv = GameObject.FindWithTag("Player").GetComponent<Inventory>();
+            var player = GameObject.FindWithTag("Player");
+            CheckProgressQuest();
+
+            Inventory inv = player.GetComponent<Inventory>();
             inv.AddItem(new InventoryItem(waterPrefab, 1));
         }
 
@@ -47,6 +53,15 @@ namespace SystemExample.Interaction {
             
         }
 
+        void CheckProgressQuest() { //Very specific for this instance, in an actual project would need better implementation
+            if (progHandler == null) { progHandler = FindObjectOfType<ProgressHandler>(); }
+
+            //Attempt to find associated quest
+            var assocQuest = progHandler.GetQuests().FirstOrDefault(q => q.GetQuestName() == "A Rude Wakeup Call");
+            if (assocQuest != null && assocQuest.GetCurrentNode().GetText() == "Fetch water") {
+                progHandler.AdvanceQuest(assocQuest.GetQuest());
+            }
+        }
 
     }
 

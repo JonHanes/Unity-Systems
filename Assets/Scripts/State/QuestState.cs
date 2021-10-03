@@ -25,6 +25,7 @@ public class QuestState {
     }
 
     public Quest GetQuest() => quest;
+    public string GetQuestName() => quest.GetQuestName();
     public QuestNode GetCurrentNode() => currentNode;
     public QuestStage GetStage() => stage;
     public void Activate() => stage = QuestStage.Active;

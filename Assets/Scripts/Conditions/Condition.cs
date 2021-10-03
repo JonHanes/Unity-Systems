@@ -12,11 +12,19 @@ namespace SystemExample.Conditions {
         public InventoryCheck[] InventoryChecks;
         public QuestCheck[] QuestChecks;
         public RelationshipCheck[] RelationshipChecks;
-        
+        public StateCheck[] StateChecks;
 
         public bool ValidateAll() {
             foreach (var a in AttributeChecks) {
                 if (!a.Validate()) return false;
+            }
+
+            if (StateChecks.Length > 0) {
+                StateCheck.State = GameObject.FindObjectOfType<PlayerConversant>().GetAIConversant().gameObject.GetComponent<NPC>().GetState();
+
+                foreach (var S in StateChecks)  {
+                    if (!S.Validate()) return false;
+                }
             }
 
             if (InventoryChecks.Length > 0) {
