@@ -1,3 +1,4 @@
+using SystemExample.Saving;
 using SystemExample.States;
 using TMPro;
 using UnityEngine;
@@ -14,7 +15,6 @@ public class QuestUIHandler : MonoBehaviour {
     }
 
     public void UpdateQuestUI() {
-        Debug.Log("Updating quest UI...");
         ClearUI();
         var quests = progressHandler.GetQuests();
 

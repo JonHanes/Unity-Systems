@@ -4,10 +4,11 @@ using System.Linq;
 using SystemExample.Helpers;
 using SystemExample.InventorySystem;
 using SystemExample.Quests;
+using SystemExample.Saving;
 using UnityEngine;
 
 namespace SystemExample.States {
-public class ProgressHandler : MonoBehaviour {
+public class ProgressHandler : MonoBehaviour, ISaveable {
     public List<QuestState> questStates = new List<QuestState>();
     public List<QuestState> activeQuests = new List<QuestState>();
     List<Relationship> relations = new List<Relationship>();
@@ -20,9 +21,7 @@ public class ProgressHandler : MonoBehaviour {
         inventory.inventoryUpdated += CheckInventoryForQuestItems;
 
         //Populate quest list with all the quests available
-        foreach (var q in AssetFinder.GetQuests()) {
-            questStates.Add(new QuestState(q, QuestStage.NotFound, q.GetRootNode()));
-        }
+        FetchAllQuests();
     }
 
     public List<Relationship> GetRelations() => relations;
@@ -101,5 +100,40 @@ public class ProgressHandler : MonoBehaviour {
         return questStates.First(q => q.GetQuest().GetQuestName() == quest.GetQuestName());
     }
 
-}
+    public object CaptureState()
+    {
+        QuestsSaveModel progSaveModel = new QuestsSaveModel(GetAllQuests());
+        return progSaveModel;
+    }
+
+    public void RestoreState(object state) {
+        FetchAllQuests();
+        var prog = (QuestsSaveModel)state;
+
+        QuestState questState;
+        foreach (var q in prog.Quests) {
+            questState = questStates.Where(s => s.GetQuest().GetQuestName() == q.Name)
+                .FirstOrDefault();
+
+            if (questState != null) {
+                QuestNode node = questState.GetQuest().GetNodeByID(q.CurrentStep);
+                questState.SetToStage(q.Stage, node);
+
+                if (q.Stage == QuestStage.Active) activeQuests.Add(questState);
+            }
+        }
+
+        questsUpdated();
+    }
+
+    void FetchAllQuests() {
+        //Resets state
+        activeQuests = new List<QuestState>();
+        questStates = new List<QuestState>();
+
+        foreach (var q in AssetFinder.GetQuests()) {
+            questStates.Add(new QuestState(q, QuestStage.NotFound, q.GetRootNode()));
+        }
+    }
+    }
 }
